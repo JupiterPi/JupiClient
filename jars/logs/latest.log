@@ -1,0 +1,70 @@
+[20:02:19] [Client thread/INFO]: Setting user: Player453
+[20:02:19] [Client thread/INFO]: (Session ID is token:0:Player453)
+[20:02:20] [Client thread/INFO]: LWJGL Version: 2.9.1
+[20:02:20] [Client thread/INFO]: Reloading ResourceManager: Default
+[20:02:20] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[20:02:20] [Thread-5/INFO]: Initializing LWJGL OpenAL
+[20:02:20] [Thread-5/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[20:02:21] [Thread-5/INFO]: OpenAL initialized.
+[20:02:21] [Sound Library Loader/INFO]: Sound engine started
+[20:02:21] [Client thread/INFO]: Created: 512x512 textures-atlas
+[20:02:24] [Client thread/INFO]: Connecting to 127.0.0.1, 25565
+[20:02:26] [Server Connector #1/ERROR]: Couldn't connect to server
+java.net.ConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:25565
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[?:1.8.0_312]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716) ~[?:1.8.0_312]
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:191) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:255) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:502) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:452) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:346) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:101) ~[netty-all-4.0.15.Final.jar:4.0.15.Final]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_312]
+[20:02:43] [Client thread/INFO]: Connecting to mc.hypixel.net., 25565
+[20:02:54] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[20:02:54] [Server thread/INFO]: Generating keypair
+[20:02:54] [Server thread/INFO]: Preparing start region for level 0
+[20:02:55] [Server thread/INFO]: Preparing spawn area: 32%
+[20:02:56] [Server thread/INFO]: Preparing spawn area: 84%
+[20:02:56] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:02:56] [Server thread/INFO]: Player453[local:E:246ac7c2] logged in with entity id 115 at (585.5, 67.0, 164.5)
+[20:02:56] [Server thread/INFO]: Player453 joined the game
+[20:02:58] [Server thread/INFO]: Saving and pausing game...
+[20:02:58] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:02:59] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:02:59] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:03:03] [Server thread/INFO]: Saving and pausing game...
+[20:03:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:03:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:03:03] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:03:30] [Server thread/INFO]: Player453 has just earned the achievement [Taking Inventory]
+[20:03:30] [Client thread/INFO]: [CHAT] Player453 has just earned the achievement [Taking Inventory]
+[20:03:44] [Server thread/INFO]: Saving and pausing game...
+[20:03:44] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:03:44] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:03:44] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:03:47] [Server thread/INFO]: Saving and pausing game...
+[20:03:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:03:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:03:47] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:05:36] [Server thread/INFO]: Saving and pausing game...
+[20:05:36] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:05:36] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:05:36] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:05:41] [Server thread/INFO]: Saving and pausing game...
+[20:05:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:05:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:05:41] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:07:20] [Server thread/INFO]: Saving and pausing game...
+[20:07:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:07:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:07:20] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:07:21] [Server thread/INFO]: Stopping server
+[20:07:21] [Server thread/INFO]: Saving players
+[20:07:21] [Server thread/INFO]: Saving worlds
+[20:07:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Overworld
+[20:07:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/Nether
+[20:07:21] [Server thread/INFO]: Saving chunks for level 'mcpworld'/The End
+[20:07:25] [Client thread/INFO]: Stopping!
+[20:07:25] [Client thread/INFO]: SoundSystem shutting down...
+[20:07:25] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
