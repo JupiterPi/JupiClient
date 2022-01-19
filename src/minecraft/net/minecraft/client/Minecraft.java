@@ -1442,6 +1442,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
                 this.mouseHelper.grabMouseCursor();
                 this.displayGuiScreen((GuiScreen)null);
                 this.leftClickCounter = 10000;
+
+                if (!isFullScreen()) {
+                    toggleFullscreen();
+                }
             }
         }
     }
@@ -1464,6 +1468,10 @@ public class Minecraft implements IThreadListener, IPlayerUsage
      */
     public void displayInGameMenu()
     {
+        if (isFullScreen()) {
+            toggleFullscreen();
+        }
+
         if (this.currentScreen == null)
         {
             this.displayGuiScreen(new GuiIngameMenu());

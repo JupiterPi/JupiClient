@@ -59,6 +59,11 @@ public class GuiIngameMenu extends GuiScreen
             case 4:
                 this.mc.displayGuiScreen((GuiScreen)null);
                 this.mc.setIngameFocus();
+
+                if (!mc.isFullScreen()) {
+                    mc.toggleFullscreen();
+                }
+
                 break;
 
             case 5:
