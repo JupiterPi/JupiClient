@@ -343,6 +343,24 @@ public class GuiIngame extends Gui
             this.overlayPlayerList.func_175246_a(false);
         }
 
+        // custom
+        int fps = Minecraft.getFPS();
+        int color = -1;
+        if (fps < 30) {
+            color = 16067845; // red
+        } else if (fps < 60) {
+            color = 16107781; // orange
+        } else if (fps < 120) {
+            color = 5813035; // green
+        } else {
+            color = 1692687; // very green
+        }
+        mc.fontRendererObj.drawString("FPS: ", 4, 4, -1);
+        mc.fontRendererObj.drawString("" + fps, 4+ mc.fontRendererObj.getStringWidth("FPS: "), 4, color);
+        if (mc.pingAvailable()) {
+            mc.fontRendererObj.drawString("Ping: " + mc.getPing(), 4, 4+ mc.fontRendererObj.FONT_HEIGHT +4, -1);
+        }
+
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         GlStateManager.disableLighting();
         GlStateManager.enableAlpha();

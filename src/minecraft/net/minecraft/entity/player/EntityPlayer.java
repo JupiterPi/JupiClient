@@ -1164,27 +1164,27 @@ public abstract class EntityPlayer extends EntityLivingBase
      * Deals damage to the entity. If its a EntityPlayer then will take damage from the armor first and then health
      * second with the reduced value. Args: damageAmount
      */
-    protected void damageEntity(DamageSource p_70665_1_, float p_70665_2_)
+    protected void damageEntity(DamageSource damageSource, float p_70665_2_)
     {
-        if (!this.func_180431_b(p_70665_1_))
+        if (!this.func_180431_b(damageSource))
         {
-            if (!p_70665_1_.isUnblockable() && this.isBlocking() && p_70665_2_ > 0.0F)
+            if (!damageSource.isUnblockable() && this.isBlocking() && p_70665_2_ > 0.0F)
             {
                 p_70665_2_ = (1.0F + p_70665_2_) * 0.5F;
             }
 
-            p_70665_2_ = this.applyArmorCalculations(p_70665_1_, p_70665_2_);
-            p_70665_2_ = this.applyPotionDamageCalculations(p_70665_1_, p_70665_2_);
+            p_70665_2_ = this.applyArmorCalculations(damageSource, p_70665_2_);
+            p_70665_2_ = this.applyPotionDamageCalculations(damageSource, p_70665_2_);
             float var3 = p_70665_2_;
             p_70665_2_ = Math.max(p_70665_2_ - this.getAbsorptionAmount(), 0.0F);
             this.setAbsorptionAmount(this.getAbsorptionAmount() - (var3 - p_70665_2_));
 
             if (p_70665_2_ != 0.0F)
             {
-                this.addExhaustion(p_70665_1_.getHungerDamage());
+                this.addExhaustion(damageSource.getHungerDamage());
                 float var4 = this.getHealth();
                 this.setHealth(this.getHealth() - p_70665_2_);
-                this.getCombatTracker().func_94547_a(p_70665_1_, var4, p_70665_2_);
+                this.getCombatTracker().func_94547_a(damageSource, var4, p_70665_2_);
 
                 if (p_70665_2_ < 3.4028235E37F)
                 {

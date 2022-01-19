@@ -277,6 +277,17 @@ public class Minecraft implements IThreadListener, IPlayerUsage
      */
     private static int debugFPS;
 
+    // custom
+    public static int getFPS() {
+        return debugFPS;
+    }
+    public boolean pingAvailable() {
+        return currentServerData != null;
+    }
+    public int getPing() {
+        return (int)currentServerData.pingToServer;
+    }
+
     /**
      * When you place a block, it's set to 6, decremented once per tick, when it's 0, you can place another block.
      */

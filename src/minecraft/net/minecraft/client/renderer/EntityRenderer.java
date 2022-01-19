@@ -578,6 +578,10 @@ public class EntityRenderer implements IResourceManagerReloadListener
             var3 /= (float)var2.maxHurtTime;
             var3 = MathHelper.sin(var3 * var3 * var3 * var3 * (float)Math.PI);
             var4 = var2.attackedAtYaw;
+
+            var3 *= 0.3;
+            var4 *= 0.3;
+
             GlStateManager.rotate(-var4, 0.0F, 1.0F, 0.0F);
             GlStateManager.rotate(-var3 * 14.0F, 0.0F, 0.0F, 1.0F);
             GlStateManager.rotate(var4, 0.0F, 1.0F, 0.0F);
