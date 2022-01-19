@@ -11,23 +11,39 @@ public class ServerListEntryLanScan implements GuiListExtended.IGuiListEntry
     public void drawEntry(int slotIndex, int x, int y, int listWidth, int slotHeight, int mouseX, int mouseY, boolean isSelected)
     {
         int var9 = y + slotHeight / 2 - this.field_148288_a.fontRendererObj.FONT_HEIGHT / 2;
-        this.field_148288_a.fontRendererObj.drawString(I18n.format("lanServer.scanning", new Object[0]), this.field_148288_a.currentScreen.width / 2 - this.field_148288_a.fontRendererObj.getStringWidth(I18n.format("lanServer.scanning", new Object[0])) / 2, var9, 16777215);
+        this.field_148288_a.fontRendererObj.drawString(""/*I18n.format("lanServer.scanning", new Object[0])*/, this.field_148288_a.currentScreen.width / 2 - this.field_148288_a.fontRendererObj.getStringWidth(I18n.format("lanServer.scanning", new Object[0])) / 2, var9, 16777215);
         String var10;
 
-        switch ((int)(Minecraft.getSystemTime() / 300L % 4L))
+        switch ((int)(Minecraft.getSystemTime() / 170L % 10L))
         {
             case 0:
             default:
-                var10 = "O o o";
+                var10 = "Kai Wei is gay";
                 break;
 
             case 1:
-            case 3:
-                var10 = "o O o";
+            case 9:
+                var10 = "Kai Wei is gaay";
                 break;
 
             case 2:
-                var10 = "o o O";
+            case 8:
+                var10 = "Kai Wei is gaaay";
+                break;
+
+            case 3:
+            case 7:
+                var10 = "Kai Wei is gaaaay";
+                break;
+
+            case 4:
+            case 6:
+                var10 = "Kai Wei is gaaaaay";
+                break;
+
+            case 5:
+                var10 = "Kai Wei is gaaaaaay";
+                break;
         }
 
         this.field_148288_a.fontRendererObj.drawString(var10, this.field_148288_a.currentScreen.width / 2 - this.field_148288_a.fontRendererObj.getStringWidth(var10) / 2, var9 + this.field_148288_a.fontRendererObj.FONT_HEIGHT, 8421504);

@@ -5,10 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
@@ -186,6 +183,10 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.splashText = "OOoooOOOoooo! Spooky!";
         }
 
+        // custom splash texts
+        List<String> customSplashTexts = Arrays.asList("Yay, JupiClient!", "Kai Wei is gay", "better than Lunar Client");
+        this.splashText = customSplashTexts.get(new Random().nextInt(customSplashTexts.size()));
+
         boolean var2 = true;
         int var3 = this.height / 4 + 48;
 
@@ -198,9 +199,10 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.addSingleplayerMultiplayerButtons(var3, 24);
         }
 
-        this.buttonList.add(new GuiButton(0, this.width / 2 - 100, var3 + 72 + 12, 98, 20, I18n.format("menu.options", new Object[0])));
-        this.buttonList.add(new GuiButton(4, this.width / 2 + 2, var3 + 72 + 12, 98, 20, I18n.format("menu.quit", new Object[0])));
-        this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, var3 + 72 + 12));
+        int secondaryButtonsOffset = -30;
+        this.buttonList.add(new GuiButton(0, this.width / 2 - 100, var3 + 72 + 12 +secondaryButtonsOffset, 98, 20, I18n.format("menu.options", new Object[0])));
+        this.buttonList.add(new GuiButton(4, this.width / 2 + 2, var3 + 72 + 12 +secondaryButtonsOffset, 98, 20, I18n.format("menu.quit", new Object[0])));
+        //this.buttonList.add(new GuiButtonLanguage(5, this.width / 2 - 124, var3 + 72 + 12));
         Object var4 = this.field_104025_t;
 
         synchronized (this.field_104025_t)
@@ -222,7 +224,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     {
         this.buttonList.add(new GuiButton(1, this.width / 2 - 100, p_73969_1_, I18n.format("menu.singleplayer", new Object[0])));
         this.buttonList.add(new GuiButton(2, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 1, I18n.format("menu.multiplayer", new Object[0])));
-        this.buttonList.add(this.field_175372_K = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
+        //this.buttonList.add(this.field_175372_K = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
     }
 
     /**
@@ -525,7 +527,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         GlStateManager.scale(var9, var9, var9);
         this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
         GlStateManager.popMatrix();
-        String var10 = "Minecraft 1.8";
+        String var10 = "Minecraft 1.8 (OptiFine)";
 
         if (this.mc.isDemo())
         {
@@ -533,7 +535,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         }
 
         this.drawString(this.fontRendererObj, var10, 2, this.height - 10, -1);
-        String var11 = "Copyright Mojang AB. Do not distribute!";
+        String var11 = "JupiClient - Do not distribute!";
         this.drawString(this.fontRendererObj, var11, this.width - this.fontRendererObj.getStringWidth(var11) - 2, this.height - 10, -1);
 
         if (this.field_92025_p != null && this.field_92025_p.length() > 0)
